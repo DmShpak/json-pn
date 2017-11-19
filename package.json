@@ -1,0 +1,17 @@
+{
+  "name": "json-pn",
+  "version": "1.0.0",
+  "description": "JSON templates in prefix notation",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jasmine",
+    "run": "tsc -p ./ -w",
+    "compile": "tsc -p ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "typescript": "^2.6.1"
+  }
+}
