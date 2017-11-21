@@ -1,6 +1,10 @@
 {
   "name": "json-pn",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DmShpak/json-pn.git"
+  },
   "description": "JSON templates in prefix notation",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
