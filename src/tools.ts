@@ -1,5 +1,5 @@
 
-import { TemplateOutput, OperationHandler } from './interfaces'
+import { TemplateOutput, OperationHandler, Serializable } from './interfaces'
 
 export const unar = (handler: (x) => TemplateOutput): OperationHandler =>
     compiler => value => props => handler(compiler(value)(props))

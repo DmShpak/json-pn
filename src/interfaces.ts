@@ -1,7 +1,7 @@
 /**
  * Serializable object can be serialized to pure JSON string
  */
-interface SerializableArray extends Array<Serializable> { }
+export interface SerializableArray extends Array<Serializable> { }
 
 export type Serializable = boolean | number | string | SerializableArray | {
     [index: string]: Serializable

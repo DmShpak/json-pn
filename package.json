@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JSON templates in prefix notation",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jasmine",
     "run": "tsc -p ./ -w",

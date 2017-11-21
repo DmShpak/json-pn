@@ -1,4 +1,4 @@
-import { Compiler,TemplateObject, TemplateFunction} from './interfaces'
+import { Compiler,TemplateObject, TemplateFunction, OperationsMap} from './interfaces'
 import { defaultOperationsMap } from './defaultOperatorsMap'
 
 export function createCompiler(operatorsMap = defaultOperationsMap): Compiler {
