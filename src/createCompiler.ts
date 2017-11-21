@@ -3,7 +3,7 @@ import { defaultOperationsMap } from './defaultOperatorsMap'
 
 export function createCompiler(operatorsMap = defaultOperationsMap): Compiler {
     
-        const compiler: Compiler = <P extends object>(template: TemplateObject): TemplateFunction<P> => {
+        const compiler: Compiler = <P extends Object>(template: TemplateObject): TemplateFunction<P> => {
             switch (typeof template) {
                 case 'number':
                 case 'string':

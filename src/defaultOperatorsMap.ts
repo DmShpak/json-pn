@@ -7,12 +7,12 @@ import { unar, binar, triar } from './tools'
  * @param path path array
  * @returns value or undefined
  */
-const extract = (target: object, path: any[]) => {
+const extract = (target: Object, path: any[]) => {
     if (path.length === 0) {
         return target
     }
     else {
-        const subpath = Array.from(path)
+        const [...subpath] = path
         const key = subpath.shift().toString()
 
         if (target.hasOwnProperty(key)) {
@@ -63,13 +63,20 @@ export const defaultOperationsMap: OperationsMap = {
         const map = value[1]
         const valueName = compiler(value[2])
         const indexName = compiler(value[3])
-        return props => (list(props) as Array<any>).map((value, index) => {
-            const extended = Object.assign({}, props, {
-                [valueName(props).toString()]: value,
-                [indexName(props).toString()]: index,
-            })
-            return compiler(map)(extended)
-        })
+        return props => {
+            if (typeof props === 'object') {
+                const compiledList = list(props) as Array<any>;
+                return compiledList.map((value, index) => {
+                    const extended = {
+                        ...(props as Object), 
+                        [valueName(props).toString()]: value,
+                        [indexName(props).toString()]: index,    
+                    } 
+                    return compiler(map)(extended)
+                })
+    
+            }
+        }
 
     }
 }

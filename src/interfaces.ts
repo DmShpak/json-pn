@@ -28,11 +28,11 @@ export interface TemplateFunction<P> {
  * Compiler uses Template object ro create Template function
  */
 export interface Compiler {
-    <P extends object>(template: TemplateObject): TemplateFunction<P>
+    <P extends Object>(template: TemplateObject): TemplateFunction<P>
 }
 
 export interface OperationHandler {
-    <P extends object>(compile: Compiler): (value: TemplateObject) => (props: P) => TemplateOutput
+    <P extends Object>(compile: Compiler): (value: TemplateObject) => (props: P) => TemplateOutput
 }
 
 export interface OperationsMap {

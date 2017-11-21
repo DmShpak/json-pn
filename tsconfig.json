@@ -1,9 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "lib",
-        "lib": [
-            "es2015"
-        ]
+        "outDir": "lib"
     },
     "include": [
         "src"
