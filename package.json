@@ -11,6 +11,7 @@
   "scripts": {
     "test": "jasmine",
     "run": "tsc -p ./ -w",
+    "prepublish": "tsc -p ./",
     "compile": "tsc -p ./"
   },
   "author": "",
