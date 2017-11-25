@@ -29,13 +29,13 @@ const compiler = createCompiler()
 
 ## Create template function
 ```js
-const hello = compiler({'@add': ["Hello", ${'@':'value'}]})
+const hello = compiler({'@add': ["Hello", {'@':'value'}]})
 ```
 
 ## Use template function
 
 ```js
-console.log(hello('word')) //Hello word
+console.log(hello({value:' word'})) //Hello word
 ```
 ## Custom operators
 
